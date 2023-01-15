@@ -16,24 +16,42 @@ function getPlayerChoice() {
     }
 }
 
-function Round(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        return "Nill"
+        return 0
     }
     else if (playerSelection == 'Error') {
         return 'Reload the page'
     }
     else if ((playerSelection == "Scissors" && computerSelection == 'Paper') || (playerSelection == 'Rock' && computerSelection == 'Scissors') || 
     (playerSelection == 'Paper' && computerSelection == 'Rock')){
-            return "That's a victory!" 
+            return 1
     }
     else {
-        return "That's a defeat!"
+        return -1
     }
 }
 
 
-let pl_choice = getPlayerChoice();
-let cm_choice = getComputerChoice();
+function game(){
+    let score = 0
+    for (let i = 0; i < 5; i++) {
+        let pl_choice = getPlayerChoice();
+        let cm_choice = getComputerChoice();
+        score += playRound(pl_choice, cm_choice)
+        console.log(`Your choice ${pl_choice} \nComputer choice:${cm_choice} \nCurrent score: ${score}`)
+    }
+    if (score >= 1){
+        return 'VICTORY'
+    }
+    else if (score < 0) {
+        return 'DEFEAT'
+    }
+    else {
+        return "NILL"
+    }
+}
 
-console.log(Round(pl_choice, cm_choice))
+result = game()
+console.log(result);
+alert(result)
