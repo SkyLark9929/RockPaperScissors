@@ -1,7 +1,7 @@
 let answers = ['Rock', 'Paper', 'Scissors']
 
 function getComputerChoice() {
-    let index = Math.floor(Math.random() * answers.length);
+    let index = Math.round(Math.random() * answers.length);
     return answers[index];
 }
 
