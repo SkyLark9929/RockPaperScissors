@@ -1,4 +1,45 @@
+@font-face {
+    font-family: "Bloodlust";
+    src: url(fonts/bloodlust.ttf);
+}
 body {
+    font-family: "Bloodlust";
     background-color: black;
     color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
+img {
+    width: 100%;
+    height: auto;
+}
+
+#main_space{
+    position: relative;
+}
+
+#start_header{
+    position: absolute;
+    width: 100%;
+    font-size: 180px;
+    text-align: center;
+    -webkit-text-stroke: 3px black;
+}
+#start_button{
+    border: none;
+    position: absolute;
+    font-family: "Bloodlust";
+    font-size: 120px;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    -webkit-text-stroke: 3px black;
+    color: white;
+    background: none;
+    outline: none;
+}
+button:active {
+    border-style: outset;
+  }
