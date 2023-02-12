@@ -1,4 +1,45 @@
-let answers = ['Rock', 'Paper', 'Scissors']
+let answers = ['Rock', 'Paper', 'Scissors'];
+const start = document.querySelector('#start_button');
+const start_header = document.querySelector('#start_header');
+const main_space = document.querySelector('#main_space')
+start.addEventListener('click', createGamePage);
+
+function createGamePage() {
+    // Deleting all the start page elements
+    start.remove();
+    start_header.remove();
+
+    // Adding all the game UI
+    const score_container = document.createElement('div');
+    score_container.id = 'score_container';
+    main_space.appendChild(score_container);
+
+    const your_score = document.createElement('h2');
+    your_score.id = 'your_score';
+    const computer_score = document.createElement('h2');
+    computer_score.id = 'computer_score';
+    your_score.textContent = 'You: '
+    computer_score.textContent = 'Necromancer: '
+    score_container.appendChild(your_score);
+    score_container.appendChild(computer_score);
+
+    const buttons_container = document.createElement('div');
+    buttons_container.id = 'buttons_container';
+    main_space.appendChild(buttons_container);
+
+    const rock = document.createElement('button');
+    rock.id = 'rock';
+    const paper = document.createElement('button');
+    paper.id = 'paper';
+    const scissors = document.createElement('button');
+    scissors.id = 'scissors';
+    rock.textContent = 'Rock';
+    paper.textContent = 'Paper';
+    scissors.textContent = 'Scissors';
+    buttons_container.appendChild(rock);
+    buttons_container.appendChild(paper);
+    buttons_container.appendChild(scissors);
+}
 
 function getComputerChoice() {
     let index = Math.round(Math.random() * answers.length);
@@ -51,7 +92,3 @@ function game(){
         return "NILL"
     }
 }
-
-result = game()
-console.log(result);
-alert(result)

@@ -10,6 +10,7 @@ body {
     margin-top: 0px;
     margin-right: 0px;
     margin-left: 0px;
+    -webkit-text-stroke: 3px black;
 }
 img {
     width: 100%;
@@ -25,7 +26,6 @@ img {
     width: 100%;
     font-size: 180px;
     text-align: center;
-    -webkit-text-stroke: 3px black;
 }
 #start_button{
     border: none;
@@ -35,11 +35,30 @@ img {
     left: 50%;
     top: 70%;
     transform: translate(-50%, -50%);
-    -webkit-text-stroke: 3px black;
     color: white;
     background: none;
     outline: none;
 }
 button:active {
     border-style: outset;
-  }
+}
+#score_container {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+#buttons_container {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
