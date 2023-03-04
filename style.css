@@ -62,3 +62,12 @@ button:active {
     margin-right: auto;
     font-size: 60px;
 }
+#rock, #paper, #scissors{
+    font-family: "Bloodlust";
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-size: 60px;
+    border: none;
+    background: none;
+    outline: none;
+}
